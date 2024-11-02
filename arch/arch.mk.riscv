@@ -29,6 +29,9 @@ endif
 ifeq ($(BR2_RISCV_ISA_RVV),y)
 GCC_TARGET_ARCH := $(GCC_TARGET_ARCH)v
 endif
+ifeq ($(BR2_RISCV_ISA_XTHEAD),y)
+GCC_TARGET_ARCH := $(GCC_TARGET_ARCH)_xtheadba_xtheadbb_xtheaddbs_xtheadcmo_xtheadcondmov_xtheadfmemidx_xtheadfmv_xtheadint_xtheadmac_xtheadmemidx_xtheadmempair_xtheadsync
+endif
 
 # Starting from gcc 12.x, csr and fence instructions have been
 # separated from the base I instruction set, and special -march

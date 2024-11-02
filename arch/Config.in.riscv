@@ -45,6 +45,10 @@ config BR2_RISCV_ISA_RVV
 	bool "Vector Instructions (V)"
 	select BR2_ARCH_NEEDS_GCC_AT_LEAST_12
 
+config BR2_RISCV_ISA_XTHEAD
+	bool "Thead Instructions (XTHEAD)"
+	select BR2_ARCH_NEEDS_GCC_AT_LEAST_13
+
 choice
 	prompt "Target Architecture Size"
 	default BR2_RISCV_64
